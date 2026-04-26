@@ -2,87 +2,51 @@
 
 # 🚀 TrustMarket – Decentralized Marketplace (Web3 OLX)
 
-A hybrid **Web2 + Web3 decentralized marketplace** where users can securely buy and sell items using blockchain-based escrow, MetaMask authentication, and a trust scoring system.
+A hybrid **Web2 + Web3 marketplace** where users can securely buy and sell items using blockchain-based escrow, MetaMask authentication, and a trust scoring system.
 
 ---
 
-## 🌐 Live Concept
+## 🌐 System Architecture
 
-TrustMarket removes middlemen by combining:
+<img src="https://github.com/user-attachments/assets/1396e8bb-def7-4955-9a3f-fe5cdb02dc5f" width="100%"/>
 
-* ⚡ Fast Web2 backend (Node + MongoDB)
-* 🔐 Secure Web3 smart contracts (Solidity + Hardhat)
-* 👛 Wallet-based identity (MetaMask)
-
----
-
-## 🏗️ System Architecture
-
-<img src="https://github.com/user-attachments/assets/1396e8bb-def7-4955-9a3f-fe5cdb02dc5f" alt="TrustMarket Architecture" width="100%"/>
-
-### 🧠 Overview
-
-* MongoDB handles fast user + product data
-* Node.js/Express manages APIs
-* Smart contracts handle escrow & payments
-* MetaMask ensures secure user authentication
+**Overview:**
+MongoDB handles data storage, Node.js manages APIs, and Solidity smart contracts ensure secure escrow-based transactions. MetaMask acts as the identity layer.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### 💻 Frontend
-
-* HTML
-* CSS
-* JavaScript (SPA)
-
-### ⚙️ Backend
-
-* Node.js
-* Express.js
-
-### 🗄️ Database
-
-* MongoDB
-
-### ⛓️ Blockchain
-
-* Solidity
-* Hardhat
-
-### 🔗 Web3 Integration
-
-* ethers.js
-* MetaMask
+**Frontend:** HTML, CSS, JavaScript (SPA)
+**Backend:** Node.js, Express.js
+**Database:** MongoDB
+**Blockchain:** Solidity, Hardhat
+**Web3 Integration:** ethers.js, MetaMask
 
 ---
 
-## 🔄 System Workflow
+## 🔄 Workflow
 
-1. User registers and connects MetaMask wallet
-2. Seller creates product listing with signature verification
-3. Buyer places order and pays via smart contract
-4. Funds are locked in blockchain escrow
-5. Seller ships product
-6. Buyer confirms delivery
-7. Smart contract releases payment to seller
-8. Trust score updates based on behavior
+1. User connects MetaMask wallet
+2. Seller creates product listing
+3. Buyer purchases via smart contract
+4. Funds locked in escrow
+5. Delivery confirmation
+6. Smart contract releases payment
+7. Trust score updates automatically
 
 ---
 
 ## ⚙️ Prerequisites
 
-Before running this project, ensure you have:
-
-* Node.js (v16+ recommended)
-* MongoDB running locally (`mongodb://localhost:27017`)
-* MetaMask browser extension
-* Hardhat environment setup
+* Node.js (v16+)
+* MongoDB (local or cloud)
+* MetaMask extension
+* Hardhat setup
 
 ---
 
-## ⛓️ Smart Contract Setup (Hardhat)
+## ⛓️ Smart Contract Setup
 
 ```bash
 cd smart_contract
@@ -90,13 +54,7 @@ npx hardhat init
 npx hardhat node
 ```
 
-### 🧪 Output:
-
-* Local blockchain starts
-* 20 test accounts generated
-* 10,000 test ETH per account
-
-👉 Import account into MetaMask for testing
+👉 Import test account into MetaMask
 
 ---
 
@@ -108,13 +66,6 @@ npm install
 node server.js
 ```
 
-### ✅ Expected Output:
-
-```
-Server running on port 5000
-MongoDB connected
-```
-
 ---
 
 ## 🌐 Frontend Setup
@@ -123,7 +74,7 @@ MongoDB connected
 npx serve .
 ```
 
-Then open:
+Open:
 
 ```
 http://localhost:3000
@@ -131,124 +82,122 @@ http://localhost:3000
 
 ---
 
-## 📸 Screenshots (Project Demo)
+# 📸 Screenshots (Side-by-Side UI Demo)
 
-### 🏠 Home Page
+## 🏠 Home Page
 
-![Home Page](assets/home_page.png)
-
----
-
-### 📦 Product Listings
-
-![Product Listings](assets/product_listings.png)
+<p float="left">
+  <img src="assets/home_page.png" width="400"/>
+</p>
 
 ---
 
-### ✅ Product Listing Confirmation (MetaMask)
+## 📦 Product Listings
 
-![Listing Confirmation](assets/product_listing_confirmation.png)
-
----
-
-### 💰 Purchase via MetaMask
-
-![Purchase Confirmation](assets/purchase_metamask_confirmation.png)
+<p float="left">
+  <img src="assets/product_listings.png" width="400"/>
+</p>
 
 ---
 
-### ⭐ Trust Score System
+## ✅ Listing Confirmation (MetaMask)
 
-![Trust Score](assets/trust_score_working.png)
-
----
-
-### 👤 User Profile
-
-![User Profile](assets/user_profile.png)
+<p float="left">
+  <img src="assets/product_listing_confirmation.png" width="400"/>
+</p>
 
 ---
 
-### 📊 Audit Page
+## 💰 Purchase via MetaMask
 
-![Audit Page](assets/audit_page.png)
+<p float="left">
+  <img src="assets/purchase_metamask_confirmation.png" width="400"/>
+</p>
 
 ---
 
-## 🧪 Feature Testing Guide
+## ⭐ Trust Score System
+
+<p float="left">
+  <img src="assets/trust_score_working.png" width="400"/>
+</p>
+
+---
+
+## 👤 User Profile
+
+<p float="left">
+  <img src="assets/user_profile.png" width="400"/>
+</p>
+
+---
+
+## 📊 Audit Page
+
+<p float="left">
+  <img src="assets/audit_page.png" width="400"/>
+</p>
+
+---
+
+# 🧪 Feature Testing
 
 ### 👤 Authentication
 
-* Sign up / login
-* Connect MetaMask wallet
+* Login / signup system
+* Wallet connection via MetaMask
 
----
+### 📦 Selling Flow
 
-### 📦 Sell Item
-
-* Add product details
+* Add product
 * Upload image
-* Sign transaction via MetaMask
+* Sign transaction
 
----
+### 💰 Buying Flow
 
-### 💰 Buy Item (Escrow System)
-
-* Select product
-* Confirm payment via smart contract
-* Funds locked in escrow
-
----
+* Purchase item
+* Escrow payment system
 
 ### 🚚 Delivery Flow
 
-* Seller ships product
+* Seller ships item
 * Buyer confirms delivery
 * Smart contract releases funds
 
----
+### ⭐ Trust System
 
-### ⭐ Trust Score System
-
-* Ratings + reviews update automatically
-* Reputation score changes dynamically
+* Dynamic reputation scoring
+* Based on transactions & reviews
 
 ---
 
-### 📊 Audit System
+# 🎯 Key Features
 
-* Full transaction history available
-* Transparent user activity logs
-
----
-
-## 🎯 Key Features
-
-* 🔐 Blockchain-based escrow system
+* 🔐 Blockchain escrow system
 * 👛 MetaMask authentication
-* ⭐ Dynamic trust scoring system
+* ⭐ Trust scoring engine
 * 📊 Transparent audit logs
-* ⚡ Fast Web2 + secure Web3 hybrid architecture
+* ⚡ Hybrid Web2 + Web3 architecture
 * 🧾 Real-time transaction tracking
 
 ---
 
-## 📌 Project Highlights
+# 📌 Project Highlights
 
-✔ Hybrid Web2 + Web3 architecture
-✔ Real escrow smart contract system
 ✔ Real-world OLX-like use case
-✔ Production-style folder structure
-✔ Full transaction transparency
+✔ Smart contract-based payments
+✔ Full-stack Web3 integration
+✔ Production-style architecture
+✔ Clean modular folder structure
 
 ---
 
-## 🚀 Future Improvements
+# 🚀 Future Improvements
 
-* 🌐 Deploy smart contracts on Polygon / Ethereum mainnet
-* 🗂️ Use IPFS for decentralized image storage
+* 🌐 Deploy on Polygon / Ethereum mainnet
+* 📦 Integrate IPFS for decentralized storage
 * ⚖️ Add dispute resolution system
-* 📱 Convert frontend to React / Next.js
-* 🔔 Add real-time notifications system
+* 📱 Convert to React / Next.js frontend
+* 🔔 Add real-time notifications
 
 ---
