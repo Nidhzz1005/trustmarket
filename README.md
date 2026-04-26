@@ -1,96 +1,114 @@
+---
+
 # 🚀 TrustMarket – Decentralized Marketplace (Web3 OLX)
 
-A hybrid Web2 + Web3 marketplace where users can securely buy and sell items using blockchain-based escrow and a trust scoring system.
+A hybrid **Web2 + Web3 decentralized marketplace** where users can securely buy and sell items using blockchain-based escrow, MetaMask authentication, and a trust scoring system.
+
+---
+
+## 🌐 Live Concept
+
+TrustMarket removes middlemen by combining:
+
+* ⚡ Fast Web2 backend (Node + MongoDB)
+* 🔐 Secure Web3 smart contracts (Solidity + Hardhat)
+* 👛 Wallet-based identity (MetaMask)
 
 ---
 
 ## 🏗️ System Architecture
 
-<img width="1536" height="1024" alt="TrustMarket Architecture" src="https://github.com/user-attachments/assets/1396e8bb-def7-4955-9a3f-fe5cdb02dc5f" />
+<img src="https://github.com/user-attachments/assets/1396e8bb-def7-4955-9a3f-fe5cdb02dc5f" alt="TrustMarket Architecture" width="100%"/>
 
-This diagram represents the hybrid architecture of TrustMarket.
-MongoDB and the backend handle fast data operations, while blockchain smart contracts manage secure escrow-based transactions, ensuring both performance and trust.
+### 🧠 Overview
+
+* MongoDB handles fast user + product data
+* Node.js/Express manages APIs
+* Smart contracts handle escrow & payments
+* MetaMask ensures secure user authentication
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend**: HTML, CSS, JavaScript (SPA)
-* **Backend**: Node.js, Express.js
-* **Database**: MongoDB
-* **Blockchain**: Solidity, Hardhat
-* **Web3 Integration**: ethers.js, MetaMask
+### 💻 Frontend
+
+* HTML
+* CSS
+* JavaScript (SPA)
+
+### ⚙️ Backend
+
+* Node.js
+* Express.js
+
+### 🗄️ Database
+
+* MongoDB
+
+### ⛓️ Blockchain
+
+* Solidity
+* Hardhat
+
+### 🔗 Web3 Integration
+
+* ethers.js
+* MetaMask
 
 ---
 
-## 🔄 Workflow Overview
+## 🔄 System Workflow
 
-1. User signs up and connects wallet
-2. Seller lists item with MetaMask signature
+1. User registers and connects MetaMask wallet
+2. Seller creates product listing with signature verification
 3. Buyer places order and pays via smart contract
-4. Funds are locked in escrow
-5. Seller ships item
+4. Funds are locked in blockchain escrow
+5. Seller ships product
 6. Buyer confirms delivery
-7. Payment is released to seller
+7. Smart contract releases payment to seller
+8. Trust score updates based on behavior
 
 ---
 
 ## ⚙️ Prerequisites
 
-* **Node.js** (v16+ recommended)
-* **MongoDB** (running locally on port `27017` or configured via `MONGO_URI`)
-* **MetaMask Extension** (configured on a test network)
+Before running this project, ensure you have:
+
+* Node.js (v16+ recommended)
+* MongoDB running locally (`mongodb://localhost:27017`)
+* MetaMask browser extension
+* Hardhat environment setup
 
 ---
 
-## ⛓️ Start Local Blockchain (Hardhat)
+## ⛓️ Smart Contract Setup (Hardhat)
 
-1. Open a terminal
-2. Navigate to smart contract folder:
+```bash
+cd smart_contract
+npx hardhat init
+npx hardhat node
+```
 
-   ```bash
-   cd smart_contract
-   ```
-3. Initialize Hardhat (if not already done):
+### 🧪 Output:
 
-   ```bash
-   npx hardhat init
-   ```
-4. Start local blockchain:
-
-   ```bash
-   npx hardhat node
-   ```
-
-### Output:
-
+* Local blockchain starts
 * 20 test accounts generated
-* Each account has **10,000 test ETH**
+* 10,000 test ETH per account
 
-👉 Import a private key into MetaMask to simulate transactions.
+👉 Import account into MetaMask for testing
 
 ---
 
-## 🖥️ Start Backend Server
+## 🖥️ Backend Setup
 
-1. Open a new terminal
-2. Navigate to backend:
+```bash
+cd backend
+npm install
+node server.js
+```
 
-   ```bash
-   cd backend
-   ```
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-4. Start server:
-
-   ```bash
-   node server.js
-   ```
-
-### Expected Output:
+### ✅ Expected Output:
 
 ```
 Server running on port 5000
@@ -99,126 +117,138 @@ MongoDB connected
 
 ---
 
-## 🌐 Start Frontend
+## 🌐 Frontend Setup
 
-1. Open another terminal
-2. Navigate to project root
-3. Run static server:
+```bash
+npx serve .
+```
 
-   ```bash
-   npx serve .
-   ```
-4. Open browser:
+Then open:
 
-   ```
-   http://localhost:3000
-   ```
+```
+http://localhost:3000
+```
+
+---
+
+## 📸 Screenshots (Project Demo)
+
+### 🏠 Home Page
+
+![Home Page](assets/home_page.png)
+
+---
+
+### 📦 Product Listings
+
+![Product Listings](assets/product_listings.png)
+
+---
+
+### ✅ Product Listing Confirmation (MetaMask)
+
+![Listing Confirmation](assets/product_listing_confirmation.png)
+
+---
+
+### 💰 Purchase via MetaMask
+
+![Purchase Confirmation](assets/purchase_metamask_confirmation.png)
+
+---
+
+### ⭐ Trust Score System
+
+![Trust Score](assets/trust_score_working.png)
+
+---
+
+### 👤 User Profile
+
+![User Profile](assets/user_profile.png)
+
+---
+
+### 📊 Audit Page
+
+![Audit Page](assets/audit_page.png)
 
 ---
 
 ## 🧪 Feature Testing Guide
 
-### 👤 1. Create Account & Login
+### 👤 Authentication
 
-* Click **Connect**
-* Sign up with email and password
-
-**Result:**
-
-* Initial Trust Score = 50%
-* User dashboard loads
+* Sign up / login
+* Connect MetaMask wallet
 
 ---
 
-### 📦 2. Sell an Item
+### 📦 Sell Item
 
-* Click **Sell**
-* Enter product details
+* Add product details
 * Upload image
-* Click **Publish Listing**
-
-**MetaMask Action:**
-
-* Sign message (ownership proof)
-
-**Result:**
-
-* Item appears in marketplace
+* Sign transaction via MetaMask
 
 ---
 
-### 💰 3. Buy an Item (Escrow)
+### 💰 Buy Item (Escrow System)
 
-* Use another account
-* Select item → Click **Buy Now**
-
-**MetaMask Action:**
-
-* Confirm transaction
-
-**Result:**
-
-* Payment sent to smart contract (escrow)
-* Seller notified
+* Select product
+* Confirm payment via smart contract
+* Funds locked in escrow
 
 ---
 
-### 🚚 4. Delivery & Payment Release
+### 🚚 Delivery Flow
 
-* Seller ships item
+* Seller ships product
 * Buyer confirms delivery
-
-**Result:**
-
-* Smart contract releases funds to seller
+* Smart contract releases funds
 
 ---
 
-### ⭐ 5. Reviews & Trust Score
+### ⭐ Trust Score System
 
-* Buyer leaves rating and review
-
-**Result:**
-
-* Trust score updates automatically
-* Review visible publicly
+* Ratings + reviews update automatically
+* Reputation score changes dynamically
 
 ---
 
-### 📊 6. Audit System
+### 📊 Audit System
 
-* View profile → Trust Score
-* Access audit page
-
-**Result:**
-
-* Full transaction history logged
-* Transparent user activity
+* Full transaction history available
+* Transparent user activity logs
 
 ---
 
 ## 🎯 Key Features
 
-* 🔐 Secure escrow using blockchain smart contracts
-* ⭐ Trust scoring system for users
-* 📊 Transparent audit log
-* 🔗 Wallet-based identity verification
-* ⚡ Fast performance using hybrid architecture
+* 🔐 Blockchain-based escrow system
+* 👛 MetaMask authentication
+* ⭐ Dynamic trust scoring system
+* 📊 Transparent audit logs
+* ⚡ Fast Web2 + secure Web3 hybrid architecture
+* 🧾 Real-time transaction tracking
 
 ---
 
-## 🎯 Conclusion
+## 📌 Project Highlights
 
-TrustMarket demonstrates a scalable hybrid architecture combining Web2 efficiency with Web3 trust.
-It eliminates the need for intermediaries by using smart contracts for secure transactions, while maintaining high performance through traditional backend systems.
+✔ Hybrid Web2 + Web3 architecture
+✔ Real escrow smart contract system
+✔ Real-world OLX-like use case
+✔ Production-style folder structure
+✔ Full transaction transparency
 
 ---
 
-## 📌 Future Improvements
+## 🚀 Future Improvements
 
-* Integrate IPFS for decentralized image storage
-* Add dispute resolution system
-* Deploy on public blockchain (Polygon/Ethereum)
-* Enhance UI with React or Flutter
+* 🌐 Deploy smart contracts on Polygon / Ethereum mainnet
+* 🗂️ Use IPFS for decentralized image storage
+* ⚖️ Add dispute resolution system
+* 📱 Convert frontend to React / Next.js
+* 🔔 Add real-time notifications system
 
 ---
