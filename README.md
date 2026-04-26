@@ -5,6 +5,9 @@ You have successfully completed the full-stack setup of the **TrustMarket Web3 m
 
 Follow the steps below to run everything and verify that your system is working correctly.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1396e8bb-def7-4955-9a3f-fe5cdb02dc5f" />
+
+
 ---
 
 ## **1. Prerequisites**
