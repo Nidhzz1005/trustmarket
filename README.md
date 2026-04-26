@@ -88,43 +88,36 @@ http://localhost:3000
 
   <img src="assets/home_page.png" width="350"/>
 
----
 
 ## 📦 Product Listings
 
   <img src="assets/product_listings.png" width="350"/>
 
----
 
 ## ✅ Listing Confirmation (MetaMask)
 
   <img src="assets/product_lisitng_confirmation.png" width="350"/>
 
----
 
 ## 💰 Purchase via MetaMask
 
   <img src="assets/purchase_metamask_confirmation.png" width="350"/>
 
----
 
 ## ⭐ Trust Score System
 
   <img src="assets/trust_score_working.png" width="350"/>
 
----
 
 ## 👤 User Profile
 
   <img src="assets/user_profile.png" width="350"/>
 
----
 
 ## 📊 Audit Page
 
   <img src="assets/audit_page.png" width="350"/>
 
----
 
 # 🧪 Feature Testing
 
