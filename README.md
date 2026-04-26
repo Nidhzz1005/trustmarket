@@ -161,16 +161,6 @@ http://localhost:3000
 
 ---
 
-# 📌 Project Highlights
-
-✔ Real-world OLX-like use case
-✔ Smart contract-based payments
-✔ Full-stack Web3 integration
-✔ Production-style architecture
-✔ Clean modular folder structure
-
----
-
 # 🚀 Future Improvements
 
 * 🌐 Deploy on Polygon / Ethereum mainnet
