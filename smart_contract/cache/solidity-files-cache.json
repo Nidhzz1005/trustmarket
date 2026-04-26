@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\Nidhi\\Downloads\\trustmarket-fronted - Copy\\smart_contract\\contracts\\TrustMarket.sol": {
+      "lastModificationDate": 1777178272516,
+      "contentHash": "5bb2c591bfa5e3a9b5899eba73d632f8",
+      "sourceName": "contracts/TrustMarket.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "TrustMarket"
+      ]
+    }
+  }
+}
