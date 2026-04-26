@@ -1,11 +1,10 @@
 
 # **TrustMarket Setup and Execution Guide**
 
-You have successfully completed the full-stack setup of the **TrustMarket Web3 marketplace**.
-
-Follow the steps below to run everything and verify that your system is working correctly.
-
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1396e8bb-def7-4955-9a3f-fe5cdb02dc5f" />
+This diagram illustrates the hybrid Web2 + Web3 architecture of TrustMarket.
+The backend and MongoDB handle fast data operations, while blockchain smart contracts manage secure escrow-based transactions.
+This ensures both performance and trust in buyer-seller interactions.
 
 
 ---
