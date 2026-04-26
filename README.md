@@ -82,61 +82,47 @@ http://localhost:3000
 
 ---
 
-# 📸 Screenshots (Side-by-Side UI Demo)
+# 📸 Screenshots
 
 ## 🏠 Home Page
 
-<p float="left">
-  <img src="assets/home_page.png" width="400"/>
-</p>
+  <img src="assets/home_page.png" width="350"/>
 
 ---
 
 ## 📦 Product Listings
 
-<p float="left">
-  <img src="assets/product_listings.png" width="400"/>
-</p>
+  <img src="assets/product_listings.png" width="350"/>
 
 ---
 
 ## ✅ Listing Confirmation (MetaMask)
 
-<p float="left">
-  <img src="assets/product_listing_confirmation.png" width="400"/>
-</p>
+  <img src="assets/product_listing_confirmation.png" width="350"/>
 
 ---
 
 ## 💰 Purchase via MetaMask
 
-<p float="left">
-  <img src="assets/purchase_metamask_confirmation.png" width="400"/>
-</p>
+  <img src="assets/purchase_metamask_confirmation.png" width="350"/>
 
 ---
 
 ## ⭐ Trust Score System
 
-<p float="left">
-  <img src="assets/trust_score_working.png" width="400"/>
-</p>
+  <img src="assets/trust_score_working.png" width="350"/>
 
 ---
 
 ## 👤 User Profile
 
-<p float="left">
-  <img src="assets/user_profile.png" width="400"/>
-</p>
+  <img src="assets/user_profile.png" width="350"/>
 
 ---
 
 ## 📊 Audit Page
 
-<p float="left">
-  <img src="assets/audit_page.png" width="400"/>
-</p>
+  <img src="assets/audit_page.png" width="350"/>
 
 ---
 
