@@ -98,7 +98,7 @@ http://localhost:3000
 
 ## ✅ Listing Confirmation (MetaMask)
 
-  <img src="assets/product_listing_confirmation.png" width="350"/>
+  <img src="assets/product_lisitng_confirmation.png" width="350"/>
 
 ---
 
