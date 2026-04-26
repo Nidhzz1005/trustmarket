@@ -14,7 +14,7 @@ Since TrustMarket relies on smart contracts for escrow, you need a local Ethereu
 1. Open a new terminal.
 2. Navigate to the `smart_contract` directory:
    ```bash
-   cd c:\Users\Nidhi\Downloads\trustmarket-fronted\smart_contract
+   cd smart_contract
    ```
 3. Initialize a basic hardhat project if you haven't already:
    ```bash
@@ -31,7 +31,7 @@ The backend runs on Express and handles MongoDB operations for listings, users, 
 1. Open a new terminal.
 2. Navigate to the backend directory:
    \`\`\`bash
-   cd c:\Users\Nidhi\Downloads\trustmarket-fronted\backend
+   cd backend
    \`\`\`
 3. Install dependencies:
    \`\`\`bash
@@ -46,10 +46,7 @@ The backend runs on Express and handles MongoDB operations for listings, users, 
 ## 3. Start the Frontend
 The frontend is a vanilla Javascript SPA.
 1. Open a second terminal.
-2. Navigate to the project root:
-   \`\`\`bash
-   cd c:\Users\Nidhi\Downloads\trustmarket-fronted
-   \`\`\`
+2. Navigate to the project root
 3. You can use any static server. If you have `npx` installed, simply run:
    \`\`\`bash
    npx serve .
